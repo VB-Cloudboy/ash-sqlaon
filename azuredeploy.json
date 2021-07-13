@@ -403,17 +403,17 @@
       "provisioningADVM": "[concat(parameters('_artifactsLocation'),'/provisioningADVM','.json')]",
       "provisioningSQLVMs": "[concat(parameters('_artifactsLocation'),'/main/provisioningSQLVMs.json')]",
       "configuringBackupADVM": "[concat(parameters('_artifactsLocation'),'/configuringBackupADVM.json')]",
-      "preparingAlwaysOnSqlServer": "[concat(parameters('_artifactsLocation'),'/preparingSqlServer.json')]",
-      "configuringAlwaysOn": "[concat(parameters('_artifactsLocation'),'/configuringAlwaysOn.json')]",
+      "preparingAlwaysOnSqlServer": "[concat(parameters('_artifactsLocation'),'/main/preparingSqlServer.json')]",
+      "configuringAlwaysOn": "[concat(parameters('_artifactsLocation'),'/main/configuringAlwaysOn.json')]",
       "adPDCModulesURL": "[concat(parameters('_artifactsLocation'),'/CreateADPDC.ps1.zip')]",
       "adPDCConfigurationFunction": "CreateADPDC.ps1\\CreateADPDC",
       "adBDCModulesURL": "[concat(parameters('_artifactsLocation'),'/CreateADBDC.ps1.zip')]",
       "adBDCConfigurationFunction": "CreateADBDC.ps1\\CreateADBDC",
-      "fswModulesURL": "[concat(parameters('_artifactsLocation'),'/CreateFileShareWitness.ps1.zip')]",
+      "fswModulesURL": "[concat(parameters('_artifactsLocation'),'/main/CreateFileShareWitness.ps1.zip')]",
       "fswConfigurationFunction": "CreateFileShareWitness.ps1\\CreateFileShareWitness",
-      "sqlAOPrepareModulesURL": "[concat(parameters('_artifactsLocation'),'/PrepareAlwaysOnSqlServer.ps1.zip')]",
+      "sqlAOPrepareModulesURL": "[concat(parameters('_artifactsLocation'),'/main/PrepareAlwaysOnSqlServer.ps1.zip')]",
       "sqlAOPrepareConfigurationFunction": "PrepareAlwaysOnSqlServer.ps1\\PrepareAlwaysOnSqlServer",
-      "createClusterModulesURL": "[concat(parameters('_artifactsLocation'),'/CreateFailoverCluster.ps1.zip')]",
+      "createClusterModulesURL": "[concat(parameters('_artifactsLocation'),'/main/CreateFailoverCluster.ps1.zip')]",
       "createClusterConfigurationFunction": "CreateFailoverCluster.ps1\\CreateFailoverCluster"
     }
   },
@@ -808,8 +808,8 @@
           }
         }
       }
-    }
-/*
+    },
+
     {
       "name": "PreparingAlwaysOnSqlServer",
       "type": "Microsoft.Resources/deployments",
@@ -891,7 +891,8 @@
           }
         }
       }
-    },
+    }
+/*
     {
       "name": "ConfiguringAlwaysOn",
       "type": "Microsoft.Resources/deployments",
