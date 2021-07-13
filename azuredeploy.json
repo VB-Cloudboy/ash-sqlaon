@@ -8,7 +8,7 @@
       "metadata": {
         "description": "Artifacts base url"
       },
-      "defaultValue": "https://raw.githubusercontent.com/VB-Cloudboy/main/ash-sqlaon"
+      "defaultValue": "https://raw.githubusercontent.com/VB-Cloudboy/ash-sqlaon"
     },
     "adminUsername": {
       "type": "string",
@@ -399,7 +399,7 @@
       "setupLBsUrl": "[concat(parameters('_artifactsLocation'), '/setupLBs-e.json')]",
       "creatingADNICUrl": "[concat(parameters('_artifactsLocation'),'/creatingADNIC.json')]",
       "creatingNicsUrl": "[concat(parameters('_artifactsLocation'),'/creatingNICS.json')]",
-      "storageAccountVirtualNetworkPublicIP": "[concat(parameters('_artifactsLocation'),'storageAccountVirtualNetworkPublicIP.json')]",
+      "storageAccountVirtualNetworkPublicIP": "[concat(parameters('_artifactsLocation'),'/main/storageAccountVirtualNetworkPublicIP.json')]",
       "provisioningADVM": "[concat(parameters('_artifactsLocation'),'/provisioningADVM','.json')]",
       "provisioningSQLVMs": "[concat(parameters('_artifactsLocation'),'/provisioningSQLVMs.json')]",
       "configuringBackupADVM": "[concat(parameters('_artifactsLocation'),'/configuringBackupADVM.json')]",
