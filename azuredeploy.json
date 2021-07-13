@@ -891,8 +891,8 @@
           }
         }
       }
-    }
-/*
+    },
+
     {
       "name": "ConfiguringAlwaysOn",
       "type": "Microsoft.Resources/deployments",
@@ -975,7 +975,7 @@
         }
       }
     }
-    */
+    
   ],
   "outputs": {}
 }
