@@ -389,10 +389,10 @@
       }
     ],
     "virtualNetworkNameWithSuffix": "[substring(concat(parameters('virtualNetworkName'), uniqueString(parameters('sqlStorageAccountName'))),0,15)]",
-    "primaryDCIPAddressNameWithSuffix": "[substring(concat(variables('primaryDCIPAddressName'), uniqueString(parameters('sqlStorageAccountName'))),0,15)]",
+    // "primaryDCIPAddressNameWithSuffix": "[substring(concat(variables('primaryDCIPAddressName'), uniqueString(parameters('sqlStorageAccountName'))),0,15)]",
     "sql1AddressNameWithSuffix": "[substring(concat(variables('sql1AddressName'), uniqueString(parameters('sqlStorageAccountName'))),0,15)]",
     "sql0AddressNameWithSuffix": "[substring(concat(variables('sql0AddressName'), uniqueString(parameters('sqlStorageAccountName'))),0,15)]",
-    "dcStorageAccountName": "[concat(substring(concat(parameters('sqlStorageAccountName'), uniqueString(parameters('sqlStorageAccountName'))),0,18),'dc')]",
+    // "dcStorageAccountName": "[concat(substring(concat(parameters('sqlStorageAccountName'), uniqueString(parameters('sqlStorageAccountName'))),0,18),'dc')]",
     "configuration": {
       "vnetwithDNSTemplateURL": "[concat(parameters('_artifactsLocation'),'/vnet-with-dns-server.json')]",
       "rdpIPAdressSetupURL": "[concat(parameters('_artifactsLocation'),'/publicip-rdp.json')]",
@@ -440,7 +440,7 @@
         ]
       }
     },
-    /*
+    
     {
       "name": "StorageAccountVirtualNetworkPublicIP",
       "type": "Microsoft.Resources/deployments",
@@ -461,15 +461,19 @@
           "sqlStorageAccountName": {
             "value": "[parameters('sqlStorageAccountName')]"
           },
+          /*
           "dcStorageAccountName": {
             "value": "[variables('dcStorageAccountName')]"
           },
+          */
           "SqlStorageAccountType": {
             "value": "[parameters('sqlStorageAccountType')]"
           },
+          /*
           "primaryDCIPAddressNameWithSuffix": {
             "value": "[variables('primaryDCIPAddressNameWithSuffix')]"
           },
+          */
           "sqlVMName": {
             "value": "[variables('vmSettings').sqlVMName]"
           },
@@ -496,7 +500,8 @@
           }
         }
       }
-    },
+    }
+/*
     {
       "name": "[variables('publicIPAddressName')]",
       "type": "Microsoft.Network/publicIPAddresses",
