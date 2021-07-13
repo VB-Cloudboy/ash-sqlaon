@@ -398,7 +398,7 @@
       "rdpIPAdressSetupURL": "[concat(parameters('_artifactsLocation'),'/publicip-rdp.json')]",
       "setupLBsUrl": "[concat(parameters('_artifactsLocation'), '/main/setupLBs-e.json')]",
       "creatingADNICUrl": "[concat(parameters('_artifactsLocation'),'/creatingADNIC.json')]",
-      "creatingNicsUrl": "[concat(parameters('_artifactsLocation'),'/creatingNICS.json')]",
+      "creatingNicsUrl": "[concat(parameters('_artifactsLocation'),'/main/creatingNICS.json')]",
       "storageAccountVirtualNetworkPublicIP": "[concat(parameters('_artifactsLocation'),'/main/storageAccountVirtualNetworkPublicIP.json')]",
       "provisioningADVM": "[concat(parameters('_artifactsLocation'),'/provisioningADVM','.json')]",
       "provisioningSQLVMs": "[concat(parameters('_artifactsLocation'),'/provisioningSQLVMs.json')]",
@@ -564,7 +564,7 @@
           }
         }
       }
-    }
+    },
 /*   
     {
       "name": "CreatingADNetworkInterface",
@@ -602,8 +602,7 @@
           }
         }
       }
-    },
-   
+    },  
     {
       "name": "ProvisioningADVM",
       "type": "Microsoft.Resources/deployments",
@@ -668,7 +667,6 @@
         }
       }
     },
-
     {
       "name": "UpdatingDNStoPrimaryADVM",
       "type": "Microsoft.Resources/deployments",
@@ -702,7 +700,7 @@
         }
       }
     },
-    
+*/   
     {
       "name": "CreatingNetworkInterfaces",
       "type": "Microsoft.Resources/deployments",
@@ -739,7 +737,8 @@
           }
         }
       }
-    },
+    }
+/*
     {
       "name": "ProvisioningSQLVMs",
       "type": "Microsoft.Resources/deployments",
