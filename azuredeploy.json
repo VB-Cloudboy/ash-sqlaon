@@ -396,7 +396,7 @@
     "configuration": {
       "vnetwithDNSTemplateURL": "[concat(parameters('_artifactsLocation'),'/vnet-with-dns-server.json')]",
       "rdpIPAdressSetupURL": "[concat(parameters('_artifactsLocation'),'/publicip-rdp.json')]",
-      "setupLBsUrl": "[concat(parameters('_artifactsLocation'), '/setupLBs-e.json')]",
+      "setupLBsUrl": "[concat(parameters('_artifactsLocation'), '/main/setupLBs-e.json')]",
       "creatingADNICUrl": "[concat(parameters('_artifactsLocation'),'/creatingADNIC.json')]",
       "creatingNicsUrl": "[concat(parameters('_artifactsLocation'),'/creatingNICS.json')]",
       "storageAccountVirtualNetworkPublicIP": "[concat(parameters('_artifactsLocation'),'/main/storageAccountVirtualNetworkPublicIP.json')]",
@@ -516,8 +516,8 @@
           "reverseFqdn": "[concat(variables('dnsPrefix'), '.', resourceGroup().location, '.cloudapp.', parameters('dnsSuffix'))]"
         }
       }
-    }
-/*
+    },
+
     {
       "name": "LoadBalancers",
       "type": "Microsoft.Resources/deployments",
@@ -564,8 +564,8 @@
           }
         }
       }
-    },
-    
+    }
+/*   
     {
       "name": "CreatingADNetworkInterface",
       "type": "Microsoft.Resources/deployments",
@@ -668,7 +668,7 @@
         }
       }
     },
-    
+
     {
       "name": "UpdatingDNStoPrimaryADVM",
       "type": "Microsoft.Resources/deployments",
