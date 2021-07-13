@@ -440,6 +440,7 @@
         ]
       }
     },
+    /*
     {
       "name": "StorageAccountVirtualNetworkPublicIP",
       "type": "Microsoft.Resources/deployments",
@@ -558,6 +559,7 @@
         }
       }
     },
+    
     {
       "name": "CreatingADNetworkInterface",
       "type": "Microsoft.Resources/deployments",
@@ -595,7 +597,7 @@
         }
       }
     },
-    /*
+   
     {
       "name": "ProvisioningADVM",
       "type": "Microsoft.Resources/deployments",
@@ -693,13 +695,10 @@
         }
       }
     },
-    */
+    
     {
       "name": "CreatingNetworkInterfaces",
       "type": "Microsoft.Resources/deployments",
-      "dependsOn": [
-        "Microsoft.Resources/deployments/UpdatingDNStoPrimaryADVM"
-      ],
       "properties": {
         "mode": "Incremental",
         "templateLink": {
@@ -968,6 +967,7 @@
         }
       }
     }
+    */
   ],
   "outputs": {}
 }
