@@ -409,7 +409,7 @@
       "adPDCConfigurationFunction": "CreateADPDC.ps1\\CreateADPDC",
       "adBDCModulesURL": "[concat(parameters('_artifactsLocation'),'/CreateADBDC.ps1.zip')]",
       "adBDCConfigurationFunction": "CreateADBDC.ps1\\CreateADBDC",
-      "fswModulesURL": "https://raw.githubusercontent.com/Azure/AzureStack-QuickStart-Templates/master/sql-2016-alwayson/CreateFileShareWitness.ps1.zip",
+      "fswModulesURL": "[concat(parameters('_artifactsLocation'),'/main/CreateFileShareWitness.ps1.zip')]",
       "fswConfigurationFunction": "CreateFileShareWitness.ps1\\CreateFileShareWitness",
       "sqlAOPrepareModulesURL": "[concat(parameters('_artifactsLocation'),'/main/PrepareAlwaysOnSqlServer.ps1.zip')]",
       "sqlAOPrepareConfigurationFunction": "PrepareAlwaysOnSqlServer.ps1\\PrepareAlwaysOnSqlServer",
